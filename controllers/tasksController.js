@@ -42,11 +42,12 @@ module.exports = function(app) {
             })
     });
 
-    app.put('/tasks/:item/', function(req, res) {
+    app.put('/tasks/:_id/', function(req, res) {
         // update requested item from mongodb
-        Task.findOneAndUpdate(
-            {item: req.params.item.replace(/\-/g, " ")},
+        Task.findByIdAndUpdate(
+            req.params,
             {$set:{done: true}},
+            {new: true},
             function(err, data) {
                 if(err) throw err;
                 res.json(data);

@@ -22,7 +22,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: 'PUT',
-            url: '/tasks/' + item,
+            url: '/tasks/' + id,
             success: function(data){
                 //do something with the data via front-end framework
                 location.reload();
