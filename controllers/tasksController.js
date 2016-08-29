@@ -42,4 +42,14 @@ module.exports = function(app) {
             })
     });
 
+    app.put('/tasks/:item', function(req, res) {
+        // delete requested item from mongodb
+        Task.findOneAndUpdate(
+            {item: req.params.item.replace(/\-/g, " ")},
+            {$set:{done: true}},
+            function(err, data) {
+                if(err) throw err;
+                res.json(data);
+            })
+    });
 };

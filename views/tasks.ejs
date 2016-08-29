@@ -11,9 +11,13 @@
                 <input type="text" name="item" placeholder="add new item ...">
                 <button type="submit">Add item</button>
             </form>
-            <ul>
+            <ul class="tasks-list">
                 <% for (var i=0; i < tasks.length; i++){ %>
-                    <li><%= tasks[i].item %></li>
+                    <%if (tasks[i].done === true) {%>
+                        <li class="task-done"><%= tasks[i].item %></li>
+                         <% } else{ %>
+                        <li><%= tasks[i].item %></li>
+                    <% } %>
                     <button class="update">update</button>
                     <button class="delete">delete</button>
                 <% } %>

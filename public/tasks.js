@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('form').on('submit', function(){
 
         var item = $('form input');
-        var task = {item: item.val()};
+        var task = {item: item.val(), done: false};
 
         $.ajax({
             type: 'POST',
@@ -14,6 +14,19 @@ $(document).ready(function(){
             }
         });
     return false;
+    });
+
+    $('.update').on('click', function(){
+        var item = $(this).prev().text().replace(/ /g, "-");
+
+        $.ajax({
+            type: 'PUT',
+            url: '/tasks/' + item,
+            success: function(data){
+                //do something with the data via front-end framework
+                location.reload();
+            }
+        });
     });
 
     $('.delete').on('click', function(){
