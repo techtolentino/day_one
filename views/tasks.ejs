@@ -2,7 +2,7 @@
     <head>
         <title>Tribe Starter Kit</title>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-        <script src="./tasks.js"></script>
+        <script src="./scripts/tasks.js"></script>
     </head>
     <body>
         <h1>Day One Starter Kit</h1>
@@ -14,7 +14,7 @@
             <ul class="tasks-list">
                 <% for (var i=0; i < tasks.length; i++){ %>
                     <%if (tasks[i].done === true) {%>
-                        <li class="task-done"><%= tasks[i].item %></li>
+                        <li class="task-done" style="text-decoration: line-through"><%= tasks[i].item %></li>
                          <% } else{ %>
                         <li><%= tasks[i].item %></li>
                     <% } %>
