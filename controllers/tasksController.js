@@ -44,7 +44,6 @@ module.exports = function(app) {
 
     app.put('/tasks/:item/', function(req, res) {
         // update requested item from mongodb
-
         Task.findOneAndUpdate(
             {item: req.params.item.replace(/\-/g, " ")},
             {$set:{done: true}},
