@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Tribe Starter Kit</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="./tasks.js"></script>
+    </head>
+    <body>
+        <h1>Tribe Starter Kit</h1>
+        <div id="tasks">
+            <form action="">
+                <input type="text" name="item" placeholder="add new item ...">
+                <button type="submit">Add item</button>
+            </form>
+            <ul>
+                <% for (var i=0; i < tasks.length; i++){ %>
+                    <li><%= tasks[i].item %></li>
+                    <button class="update">update</button>
+                    <button class="delete">delete</button>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
