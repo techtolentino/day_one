@@ -32,7 +32,6 @@ $(document).ready(function(){
 
     $('.delete').on('click', function(){
         var item = $(this).prev().prev().text().replace(/ /g, "-");
-        alert(item);
 
         $.ajax({
             type: 'DELETE',
