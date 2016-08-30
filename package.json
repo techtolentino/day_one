@@ -4,7 +4,8 @@
   "description": "The Tribe Starter Kit",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css"
   },
   "author": "Randy Tolentino",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "express": "^4.14.0",
     "mongoose": "^4.5.10",
     "mongoose-int32": "^0.1.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0"
   }
 }
