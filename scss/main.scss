@@ -1,3 +1,10 @@
-body {
-    background-color: blue;
-}
+// base
+@import 'reset';
+@import 'config';
+@import 'functions';
+@import 'base';
+
+// project specific
+@import 'bands';
+@import 'container';
+@import 'typography';

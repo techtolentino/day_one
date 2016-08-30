@@ -53,7 +53,7 @@ module.exports = function(app) {
             } else {
                 data.done = !data.done;
                 data.save();
-                console.log(data.item + " has been updated");
+                console.log("the db has been updated");
                 res.send({redirect: '/tasks'});
             }
         })
