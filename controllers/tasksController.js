@@ -44,13 +44,18 @@ module.exports = function(app) {
 
     app.put('/tasks/:_id/', function(req, res) {
         // update requested item from mongodb
-        Task.findByIdAndUpdate(
-            req.params,
-            {$set:{done: true}},
-            {new: true},
-            function(err, data) {
-                if(err) throw err;
-                res.json(data);
-            })
+        var id = req.params;
+
+        Task.findOne({_id: req.params}, function(err, data) {
+            if(err) {
+                console.log(err);
+                res.status(500).send()
+            } else {
+                data.done = !data.done;
+                data.save();
+                console.log(data.item + " has been updated");
+                res.send({redirect: '/tasks'});
+            }
+        })
     });
 };
