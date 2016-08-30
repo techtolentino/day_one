@@ -17,8 +17,7 @@ $(document).ready(function(){
     });
 
     $('.update').on('click', function(){
-        var item = $(this).prev().text().replace(/ /g, "-");
-        var id = $(this).prev().attr('data-id');
+        var id = $(this).parent().parent().attr('data-id');
 
         $.ajax({
             type: 'PUT',
@@ -31,7 +30,7 @@ $(document).ready(function(){
     });
 
     $('.delete').on('click', function(){
-        var item = $(this).prev().prev().text().replace(/ /g, "-");
+        var item = $(this).parent().parent().attr('data-id');
 
         $.ajax({
             type: 'DELETE',

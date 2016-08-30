@@ -1,28 +1,47 @@
 <html>
     <head>
         <title>Tribe Starter Kit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles/main.css">
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script src="./scripts/tasks.js"></script>
     </head>
     <body>
-        <h1>Day One Starter Kit</h1>
-        <div id="tasks">
-            <form action="">
-                <input type="text" name="item" placeholder="add new item ...">
-                <button type="submit">Add item</button>
-            </form>
-            <ul class="tasks-list">
-                <% for (var i=0; i < tasks.length; i++){ %>
-                    <%if (tasks[i].done === true) {%>
-                        <li class="task-done" data-id='<%= tasks[i]._id %>' style="text-decoration: line-through"><%= tasks[i].item %></li>
-                         <% } else{ %>
-                        <li data-id='<%= tasks[i]._id %>'><%= tasks[i].item %></li>
-                    <% } %>
-                    <button class="update">update</button>
-                    <button class="delete">delete</button>
-                <% } %>
-            </ul>
+        <div class="container">
+            <div class="band">
+                <h1>Welcome to the Squad!</h1>
+                <h3>Day One Starter Kit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis molestias suscipit, iste expedita placeat? Repellat rerum amet sit adipisci. Ducimus possimus repellendus velit saepe aperiam, esse amet earum quod laudantium.</p>
+            </div>
+            <div class="band">
+                <div class="tasks">
+                    <form class="tasks-form">
+                        <input class="tasks-form-input" type="text" name="item" placeholder="add new item ...">
+                        <button class="tasks-form-submit" type="submit">Add item</button>
+                    </form>
+                    <ul class="tasks-list">
+                        <% for (var i=0; i < tasks.length; i++){ %>
+                            <%if (tasks[i].done === true) {%>
+                            <li class="tasks-list-item" data-id='<%= tasks[i]._id %>' style="text-decoration: line-through">
+                                <span class="tasks-title"><%= tasks[i].item %></span>
+                                <div class="tasks-action-group">
+                                    <button class="update">update</button>
+                                    <button class="delete">delete</button>
+                                </div>
+                            </li>
+                            <% } else { %>
+                            <li class="tasks-list-item" data-id='<%= tasks[i]._id %>'>
+                                <span class="tasks-title"><%= tasks[i].item %></span>
+                                <div class="tasks-action-group">
+                                    <button class="update">update</button>
+                                    <button class="delete">delete</button>
+                                </div>
+                            </li>
+                            <% } %>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>

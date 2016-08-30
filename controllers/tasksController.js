@@ -34,9 +34,9 @@ module.exports = function(app) {
         });
     });
 
-    app.delete('/tasks/:item', function(req, res) {
+    app.delete('/tasks/:_id', function(req, res) {
         // delete requested item from mongodb
-        Task.find({item: req.params.item.replace(/\-/g, " ")}).remove(function(err, data){
+        Task.find({_id: req.params}).remove(function(err, data){
                 if(err) throw err;
                 res.json(data);
             })

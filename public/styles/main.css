@@ -65,6 +65,27 @@ body {
   display: block;
   margin: 0 auto; }
 
+.tasks-list {
+  padding-left: 0; }
+
+.tasks-list-item {
+  display: flex;
+  justify-content: space-between; }
+
+.tasks-form {
+  display: flex;
+  justify-content: space-between; }
+
+.tasks-form-submit {
+  align-self: center; }
+
+.tasks-form-input {
+  width: 30em;
+  max-width: 75%;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  font-size: 1.25em; }
+
 h1 {
   font-size: 3.157em;
   font-weight: 600;
