@@ -22,8 +22,8 @@
                     <ul class="tasks-list">
                         <% for (var i=0; i < tasks.length; i++){ %>
                             <%if (tasks[i].done === true) {%>
-                            <li class="tasks-list-item" data-id='<%= tasks[i]._id %>' style="text-decoration: line-through">
-                                <span class="tasks-title"><%= tasks[i].item %></span>
+                            <li class="tasks-list-item" data-id='<%= tasks[i]._id %>'>
+                                <span class="tasks-title" style="text-decoration: line-through"><%= tasks[i].item %></span>
                                 <div class="tasks-action-group">
                                     <button class="update">update</button>
                                     <button class="delete">delete</button>

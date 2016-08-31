@@ -13,7 +13,7 @@ $(document).ready(function(){
             location.reload();
             }
         });
-    return false;
+        return false;
     });
 
     $('.update').on('click', function(){

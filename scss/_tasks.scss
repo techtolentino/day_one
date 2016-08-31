@@ -23,5 +23,9 @@
         margin-bottom: $base-spacing-unit * .25;
         padding: $base-spacing-unit * .25;
         font-size: 1.25em;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
