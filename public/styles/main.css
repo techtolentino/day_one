@@ -70,11 +70,13 @@ body {
 
 .tasks-list-item {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 0.7em; }
 
 .tasks-form {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 2em; }
 
 .tasks-form-submit {
   align-self: center; }

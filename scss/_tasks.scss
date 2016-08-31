@@ -6,11 +6,13 @@
     &-list-item {
         display: flex;
         justify-content: space-between;
+        margin-bottom: $base-spacing-unit * .35;
     }
 
     &-form {
         display: flex;
         justify-content: space-between;
+        margin-bottom: $base-spacing-unit;
     }
 
     &-form-submit {
